@@ -56,6 +56,12 @@ public class App {
     public void initialize() {
         buttons = List.of(button1, button2);
         boxes = List.of(box1, box2);
+
+        cNumber.textProperty().addListener((obs, oldValue, newValue) -> {
+            if (!newValue.matches("\\d*")) {
+                cNumber.setText(newValue.replaceAll("[^\\d]", ""));
+            }
+        });
     }
 
     @FXML
@@ -122,7 +128,7 @@ public class App {
                     }
                 }
 
-                String newContact = "{\"name\":\"" + cName.getText() + "\",\"number\":\"" + cNumber.getText() + "\"}";
+                String newContact = "{\"name\":\"" + cName.getText() + "\",\"number\":\"" + cNumber.getText().replace("\\", "") + "\"}";
                 contacts.add(newContact);
 
                 try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_PATH))) {
