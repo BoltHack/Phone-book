@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_LEFT" xmlns:fx="http://javafx.com/fxml" fx:controller="App" stylesheets="@style.css">
+    <HBox styleClass="header">
+        <Button fx:id="button1" text="Новый контакт" styleClass="header-btn" onAction="#handleButtonClick" />
+        <Button fx:id="button2" text="Все контакты" styleClass="header-btn" onAction="#handleButtonClick" />
+        <Button text="Github" styleClass="header-btn" onAction="#handleGitHub" />
+    </HBox>
+
+    <VBox fx:id="box1" spacing="10" styleClass="box" visible="false">
+        <Label text="Имя"/>
+        <TextField fx:id="cName" styleClass="box-TextFiled" promptText="Заполните поле ввода" />
+
+        <Label text="Номер телефона"/>
+        <TextField fx:id="cNumber" styleClass="box-TextFiled" promptText="Заполните поле ввода" />
+
+        <Button onAction="#saveBtn" text="Сохранить" styleClass="save-btn" />
+    </VBox>
+
+    <VBox fx:id="box2" spacing="20" styleClass="box" visible="false">
+        <HBox spacing="10">
+            <Label text="Имя:" />
+            <Label text="Номер:" />
+        </HBox>
+        <ScrollPane prefWidth="300">
+            <content>
+                <VBox fx:id="contacts" spacing="20">
+                    <Label fx:id="nameLabel" />
+                    <Label fx:id="numberLabel" />
+                </VBox>
+            </content>
+        </ScrollPane>
+    </VBox>
+</VBox>

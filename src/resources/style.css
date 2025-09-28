@@ -1,0 +1,71 @@
+.root {
+    -fx-background-color: #16171d;
+}
+.header {
+    -fx-background-color: #242632;
+}
+
+.header-btn {
+    -fx-background-color: none;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+.header-btn:hover {
+    -fx-opacity: 0.8;
+}
+.header-btn.selected {
+    -fx-background-color: #2d6a4f;
+}
+
+.save-btn {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-max-width: 100px;
+}
+.save-btn:hover {
+    -fx-opacity: 0.8;
+}
+.save-btn:pressed {
+    -fx-opacity: 0.6;
+}
+
+.delete-btn {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 2px 2px 2px 2px;;
+    -fx-font-size: 12px;
+}
+.delete-btn:hover {
+    -fx-opacity: 0.8;
+}
+.delete-btn:pressed {
+    -fx-opacity: 0.6;
+}
+
+.box {
+    -fx-padding: 20px;
+    -fx-text-fill: white;
+}
+.box Label, .box Text {
+    -fx-text-fill: white;
+    -fx-text-wrap: wrap;
+}
+.box-TextFiled {
+    -fx-background-color: #242632;
+    -fx-text-fill: white;
+    -fx-max-width: 250px;
+}
+
+.scroll-pane {
+    -fx-background-color: #16171d;
+}
+.scroll-pane > .scroll-bar {
+    -fx-background-color: #16171d;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: #16171d;
+}
